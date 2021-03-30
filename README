@@ -1,0 +1,7 @@
+Test `keyctl pkey_verify` for RSASSA-PSS against reference test vectors as:
+1. Create a PSS DER certificate that wraps a pubkey
+2. Feed the certificate into kernel's keyring via `keyctl padd`
+3. Call `keyctl pkey_verify` and compare the result against the reference
+
+Usage:
+$ python3 test-nistv2.py -w $(pwd)/testvecs -n $(pwd)/testvecs

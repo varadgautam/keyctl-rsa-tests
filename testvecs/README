@@ -1,0 +1,6 @@
+Test vectors taken from various sources.
+
+Wycheproof: https://github.com/google/wycheproof/tree/master/testvectors
+NIST FIPS 186-4: https://csrc.nist.gov/Projects/Cryptographic-Algorithm-Validation-Program/Component-Testing#RSASigGenPrim
+NIST FIPS 186-2: https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/digital-signatures#rsavs
+
