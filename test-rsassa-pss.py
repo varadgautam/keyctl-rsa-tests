@@ -31,7 +31,7 @@ def keyctl_pkey_add(cert_der):
         return subprocess.run("keyctl padd asymmetric test @u".split(), input=bytes(cert_der), stdout = subprocess.PIPE)
 
 def keyctl_pkey_verify(kv, hash_algo, dat_bin, sig_bin, salt_len):
-        ver_cmd =  'keyctl pkey_verify {} "0" {} {} "enc=pss hash={} slen={} mgfhash={}"'.format(kv, dat_bin, sig_bin, hash_algo, salt_len, hash_algo)
+        ver_cmd =  'keyctl pkey_verify {} "0" {} {} "enc=pss hash={} saltlen={} mgfhash={}"'.format(kv, dat_bin, sig_bin, hash_algo, salt_len, hash_algo)
         return subprocess.run(ver_cmd, shell=True)
 
 def keyctl_load_cert(cert_file):
